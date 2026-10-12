@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yejongart.co.kr/sitemap.xml
+
