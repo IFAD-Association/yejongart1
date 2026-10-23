@@ -4687,3 +4687,115 @@ input, select, textarea {
 		}
 
 	}
+
+/* ========================================
+   예종미술학원 메인 상단 소개 영역
+   ======================================== */
+
+/* 상단 소개 영역의 전체 여백 */
+#main > .post.featured {
+    padding: 3.5rem 4rem 2.5rem;
+}
+
+/* 영문 브랜드 문구 */
+#main > .post.featured .major .date {
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    color: #8a8178;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    line-height: 1.8;
+}
+
+/* 메인 제목 */
+#main > .post.featured .major h2 {
+    margin: 0 0 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: -0.045em;
+}
+
+/* 제목 링크 */
+#main > .post.featured .major h2 a {
+    color: #292929;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* 소개 설명 */
+#main > .post.featured .major p {
+    max-width: 700px;
+    margin: 0 auto 2.2rem;
+    color: #66615d;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 2.05;
+    letter-spacing: -0.015em;
+    word-break: keep-all;
+}
+
+/* 설명 안의 강조 글씨 */
+#main > .post.featured .major p strong {
+    color: #393633;
+    font-weight: 600;
+}
+
+/* 사진 위쪽 여백 */
+#main > .post.featured > .image.main {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* 사진 아래 소개 버튼 */
+#main > .post.featured > .actions {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 980px) {
+    #main > .post.featured {
+        padding: 2.75rem 2.5rem 2rem;
+    }
+
+    #main > .post.featured .major h2 {
+        font-size: 2rem;
+    }
+
+    #main > .post.featured .major p {
+        max-width: 620px;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 736px) {
+    #main > .post.featured {
+        padding: 2.25rem 1.4rem 1.75rem;
+    }
+
+    #main > .post.featured .major .date {
+        margin-bottom: 1rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.18em;
+    }
+
+    #main > .post.featured .major h2 {
+        margin-bottom: 1.15rem;
+        font-size: 1.65rem;
+        line-height: 1.55;
+        letter-spacing: -0.04em;
+    }
+
+    #main > .post.featured .major p {
+        margin-bottom: 1.6rem;
+        font-size: 0.88rem;
+        line-height: 1.9;
+        word-break: keep-all;
+    }
+
+    #main > .post.featured > .actions {
+        margin-top: 1.5rem;
+    }
+}
