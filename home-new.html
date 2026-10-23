@@ -1,60 +1,313 @@
-
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
     <title>예종미술학원 | 실력과 사랑으로 지도합니다</title>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
     <meta name="description" content="예종미술학원은 유치부부터 입시부까지 발달 단계에 맞춘 체계적인 회화 중심 미술교육을 제공합니다." />
+
     <meta property="og:title" content="예종미술학원" />
     <meta property="og:description" content="실력과 사랑으로 지도하는 예종미술학원. 회화 중심의 체계적인 미술교육을 만나보세요." />
     <meta property="og:url" content="https://yejongart.co.kr/" />
     <meta property="og:type" content="website" />
+
     <link rel="icon" href="images/new_favicon.ico" />
+
     <link rel="stylesheet" href="assets/css/massively.css" />
     <link rel="stylesheet" href="assets/css/massively-fontawesome-all.min.css" />
+
     <noscript>
         <link rel="stylesheet" href="assets/css/massively-noscript.css" />
     </noscript>
+
     <style>
-    #intro {
-        background: none !important;
-        min-height: 0 !important;
-        height: auto !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
 
-    #intro + #main {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
+        /* =========================================
+           기본
+        ========================================= */
 
-    #main {
-        padding-top: 0 !important;
-    }
-</style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+        }
+
+        #wrapper {
+            background: #ffffff;
+        }
+
+
+        /* =========================================
+           상단 Intro 제거
+           검정색 여백과 기존 Intro 문구 제거
+        ========================================= */
+
+        #intro {
+            display: none !important;
+        }
+
+
+        /* =========================================
+           Header
+        ========================================= */
+
+        #header {
+            background: #ffffff;
+        }
+
+        #header .logo {
+            color: #333333;
+        }
+
+
+        /* =========================================
+           Navigation
+        ========================================= */
+
+        #nav {
+            background: #ffffff;
+        }
+
+        #nav ul.links li a {
+            color: #333333;
+        }
+
+        #nav ul.links li.active a {
+            color: #222222;
+        }
+
+
+        /* =========================================
+           Main
+        ========================================= */
+
+        #main {
+            background: #ffffff;
+            padding-top: 3rem;
+        }
+
+
+        /* =========================================
+           학원 소개 / 메인 이미지
+        ========================================= */
+
+        #main > .post.featured {
+            margin-bottom: 4rem;
+        }
+
+        #main > .post.featured .major {
+            padding-bottom: 1.5rem;
+        }
+
+        #main > .post.featured .major .date {
+            margin-bottom: 0.75rem;
+        }
+
+        #main > .post.featured .major h2 {
+            margin-bottom: 1rem;
+        }
+
+        #main > .post.featured .major p {
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #main > .post.featured .image.main {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #main > .post.featured .image.main img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #main > .post.featured .actions {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           교육과정
+        ========================================= */
+
+        #curriculum {
+            margin-top: 2rem;
+        }
+
+        #curriculum article {
+            padding-bottom: 2.5rem;
+        }
+
+        #curriculum article header {
+            margin-bottom: 1rem;
+        }
+
+        #curriculum article header .date {
+            margin-bottom: 0.5rem;
+        }
+
+        #curriculum article header h2 {
+            margin-bottom: 0;
+        }
+
+        #curriculum article .image.fit {
+            margin-bottom: 1.25rem;
+        }
+
+        #curriculum article .image.fit img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #curriculum article p {
+            margin-bottom: 1.25rem;
+        }
+
+        #curriculum article .actions {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           Footer
+        ========================================= */
+
+        #footer {
+            background: #f7f7f7;
+            padding: 3rem 4rem;
+        }
+
+        #footer section {
+            margin-bottom: 0;
+        }
+
+        #footer h2,
+        #footer h3 {
+            color: #333333;
+        }
+
+        #footer > section:first-child {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #footer > section:first-child p {
+            max-width: 700px;
+            margin-bottom: 0.75rem;
+        }
+
+        #footer .split.contact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem 2.5rem;
+        }
+
+        #footer .split.contact > section {
+            padding: 0;
+            border-top: none;
+        }
+
+        #footer .split.contact h3 {
+            margin-bottom: 0.35rem;
+            font-size: 0.8rem;
+        }
+
+        #footer .split.contact p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           Copyright
+        ========================================= */
+
+        #copyright {
+            background: #ffffff;
+            padding: 1.5rem 1rem;
+        }
+
+
+        /* =========================================
+           태블릿
+        ========================================= */
+
+        @media screen and (max-width: 980px) {
+
+            #main {
+                padding-top: 2rem;
+            }
+
+            #footer {
+                padding: 2.5rem 2.5rem;
+            }
+
+        }
+
+
+        /* =========================================
+           모바일
+        ========================================= */
+
+        @media screen and (max-width: 736px) {
+
+            #main {
+                padding-top: 1.5rem;
+            }
+
+            #main > .post.featured {
+                margin-bottom: 3rem;
+            }
+
+            #main > .post.featured .major {
+                padding-bottom: 1rem;
+            }
+
+            #main > .post.featured .major h2 {
+                font-size: 1.7rem;
+                line-height: 1.35;
+            }
+
+            #main > .post.featured .major p {
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            #curriculum article {
+                padding-bottom: 2rem;
+            }
+
+            #footer {
+                padding: 2.5rem 1.5rem;
+            }
+
+            #footer > section:first-child {
+                padding-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #footer .split.contact {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+        }
+
+    </style>
 </head>
 
-<body class="is-preload">
 
-    <!-- Intro -->
-    <div id="intro">
-        <h1>
-            실력과 사랑으로<br />
-            지도하는<br />
-            예종미술학원
-        </h1>
-        <p>
-            유치부부터 입시부까지 발달 단계에 맞춘 체계적인<br />
-            <strong>회화 중심 미술교육</strong>을 제공합니다.
-        </p>
-        <ul class="actions">
-            <li>
-                <a href="#main" class="button icon solid solo fa-arrow-down scrolly">둘러보기</a>
-            </li>
-        </ul>
-    </div>
+<body class="is-preload">
 
     <div id="wrapper">
 
@@ -63,303 +316,747 @@
             <a href="home-new.html" class="logo">예종미술학원</a>
         </header>
 
+
         <!-- Navigation -->
         <nav id="nav">
+
             <ul class="links">
-                <li class="active"><a href="home-new.html">홈</a></li>
-                <li><a href="Introduction.html">학원 소개</a></li>
-                <li><a href="#curriculum">교육과정</a></li>
-                <li><a href="#footer">위치 및 상담</a></li>
+
+                <li class="active">
+                    <a href="home-new.html">홈</a>
+                </li>
+
+                <li>
+                    <a href="Introduction.html">학원 소개</a>
+                </li>
+
+                <li>
+                    <a href="#curriculum">교육과정</a>
+                </li>
+
+                <li>
+                    <a href="#footer">위치 및 상담</a>
+                </li>
+
             </ul>
+
         </nav>
+
 
         <!-- Main -->
         <div id="main">
 
+
             <!-- Academy Introduction -->
+
             <article class="post featured">
+
                 <header class="major">
-                    <span class="date">YEJONG ART ACADEMY</span>
+
+                    <span class="date">
+                        YEJONG ART ACADEMY
+                    </span>
+
                     <h2>
                         <a href="Introduction.html">
                             실력과 사랑으로<br />
                             지도하는 예종미술학원
                         </a>
                     </h2>
+
                     <p>
                         <strong>예종미술학원</strong>은 유치부부터 입시부까지 발달 단계에 맞춘
                         체계적인 <strong>회화 중심 미술교육</strong>을 제공하는 전문 교육기관입니다.
                         전공 특화 강사진과 체계적인 수업 관리를 통해
                         학생 개개인의 창의성과 표현력을 이끌어냅니다.
                     </p>
+
                 </header>
 
+
                 <a href="Introduction.html" class="image main">
-                    <img src="images/pic10.jpg" alt="예종미술학원 미술교육" />
+                    <img
+                        src="images/pic10.jpg"
+                        alt="예종미술학원 미술교육"
+                    />
                 </a>
 
+
                 <ul class="actions special">
+
                     <li>
-                        <a href="Introduction.html" class="button large">학원 소개</a>
+                        <a href="Introduction.html" class="button large">
+                            학원 소개
+                        </a>
                     </li>
+
                 </ul>
+
             </article>
 
+
+
             <!-- Curriculum -->
+
             <section class="posts" id="curriculum">
 
+
                 <!-- 01 유치부 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 01</span>
-                        <h2><a href="kinder.html">유치부</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 01
+                        </span>
+
+                        <h2>
+                            <a href="kinder.html">
+                                유치부
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="kinder.html" class="image fit">
-                        <img src="images/pic71.jpg" alt="유치부 미술교육" />
+
+                        <img
+                            src="images/pic71.jpg"
+                            alt="유치부 미술교육"
+                        />
+
                     </a>
+
+
                     <p>
                         유치부 수업은 아이들의 발달 단계에 맞춘 회화 중심 미술교육입니다.
                         단순한 만들기 활동을 넘어 그림을 통해 시각적 사고와 표현력을 키우고,
                         창의적 사고와 정서 발달을 돕습니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="kinder.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="kinder.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 02 초등부 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 02</span>
-                        <h2><a href="element.html">초등부</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 02
+                        </span>
+
+                        <h2>
+                            <a href="element.html">
+                                초등부
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="element.html" class="image fit">
-                        <img src="images/pic72.jpg" alt="초등부 미술교육" />
+
+                        <img
+                            src="images/pic72.jpg"
+                            alt="초등부 미술교육"
+                        />
+
                     </a>
+
+
                     <p>
                         초등 시기는 관찰력과 표현력, 시각적 창의성을 다지는 중요한 시기입니다.
                         다양한 시각 언어를 배우고 자신의 생각을 구체적으로 그림으로 표현하는
                         힘을 기릅니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="element.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="element.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 03 중고등부 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 03</span>
-                        <h2><a href="middle.html">중고등부</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 03
+                        </span>
+
+                        <h2>
+                            <a href="middle.html">
+                                중고등부
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="middle.html" class="image fit">
-                        <img src="images/pic73.jpg" alt="중고등부 미술교육" />
+
+                        <img
+                            src="images/pic73.jpg"
+                            alt="중고등부 미술교육"
+                        />
+
                     </a>
+
+
                     <p>
                         중·고등부는 다양한 주제를 해석하고 논리적으로 시각화하는 힘을 기르는
                         심화 표현 수업입니다. 표현 능력과 미술적 사고력을 함께 발전시킵니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="middle.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="middle.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 04 미술대회반 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 04</span>
-                        <h2><a href="art.html">미술대회반</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 04
+                        </span>
+
+                        <h2>
+                            <a href="art.html">
+                                미술대회반
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="art.html" class="image fit">
-                        <img src="images/pic76.jpg" alt="미술대회반 수업" />
+
+                        <img
+                            src="images/pic76.jpg"
+                            alt="미술대회반 수업"
+                        />
+
                     </a>
+
+
                     <p>
                         다양한 주제를 자신만의 시각으로 해석하고 작품으로 표현합니다.
                         주제 이해와 화면 구성, 표현력 향상을 통해 미술대회 작품을
                         준비할 수 있도록 지도합니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="art.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="art.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 05 전공반 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 05</span>
-                        <h2><a href="major.html">전공반</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 05
+                        </span>
+
+                        <h2>
+                            <a href="major.html">
+                                전공반
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="major.html" class="image fit">
-                        <img src="images/pic75.jpg" alt="미술 전공반 수업" />
+
+                        <img
+                            src="images/pic75.jpg"
+                            alt="미술 전공반 수업"
+                        />
+
                     </a>
+
+
                     <p>
                         미술 분야에 관심이 높은 학생을 위한 수업입니다.
                         소묘와 수채화를 깊이 있게 배우며 관찰력과 표현력을 발전시키고,
                         학생의 수준과 목표에 맞춰 전공 탐색과 실기 능력 향상을 돕습니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="major.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="major.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 06 예비입시반 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 06</span>
-                        <h2><a href="pre.html">예비입시반</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 06
+                        </span>
+
+                        <h2>
+                            <a href="pre.html">
+                                예비입시반
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="pre.html" class="image fit">
-                        <img src="images/pic74.jpg" alt="예비입시반 미술교육" />
+
+                        <img
+                            src="images/pic74.jpg"
+                            alt="예비입시반 미술교육"
+                        />
+
                     </a>
+
+
                     <p>
                         본격적인 입시 준비에 앞서 기초 실력을 정리하고 입시 실기에 적응하는
                         과정입니다. 표현력과 해석력, 구성력을 다듬어 입시에 대비할 기반을
                         다집니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="pre.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="pre.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 07 애니메이션반 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 07</span>
-                        <h2><a href="#footer">애니메이션반</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 07
+                        </span>
+
+                        <h2>
+                            <a href="#footer">
+                                애니메이션반
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="#footer" class="image fit">
-                        <img src="images/pic80.jpg" alt="애니메이션반 미술 수업" />
+
+                        <img
+                            src="images/pic80.jpg"
+                            alt="애니메이션반 미술 수업"
+                        />
+
                     </a>
+
+
                     <p>
                         그림과 이야기, 장면을 연결하는 창작 활동을 통해 상상력과 표현력을
                         기릅니다. 즐겁게 그림을 그리면서 자신만의 아이디어를 시각적으로
                         풀어내는 힘을 키웁니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="#footer" class="button">상담 문의</a></li>
+
+                        <li>
+                            <a href="#footer" class="button">
+                                상담 문의
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 08 디지털회화반 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 08</span>
-                        <h2><a href="digital.html">디지털회화반</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 08
+                        </span>
+
+                        <h2>
+                            <a href="digital.html">
+                                디지털회화반
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="digital.html" class="image fit">
-                        <img src="images/pic01.jpg" alt="디지털회화 수업" />
+
+                        <img
+                            src="images/pic01.jpg"
+                            alt="디지털회화 수업"
+                        />
+
                     </a>
+
+
                     <p>
                         태블릿과 전용 드로잉 소프트웨어를 활용해 디지털 창작 능력을 기릅니다.
                         다양한 회화와 일러스트 표현을 익히며 아이디어를 디지털 작품으로
                         완성하는 과정을 경험합니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="digital.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="digital.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 09 취미미술반 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 09</span>
-                        <h2><a href="adult.html">취미미술반</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 09
+                        </span>
+
+                        <h2>
+                            <a href="adult.html">
+                                취미미술반
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="adult.html" class="image fit">
-                        <img src="images/pic78.jpg" alt="취미미술 수업" />
+
+                        <img
+                            src="images/pic78.jpg"
+                            alt="취미미술 수업"
+                        />
+
                     </a>
+
+
                     <p>
                         그림을 처음 시작하는 분부터 오랜만에 미술을 다시 시작하고 싶은 분까지
                         누구나 편하게 즐길 수 있는 회화 중심 수업입니다.
                         자신만의 작품을 완성하며 그림 그리는 즐거움을 느낄 수 있습니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="adult.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="adult.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
+
                 <!-- 10 세라믹페인팅반 -->
+
                 <article>
+
                     <header>
-                        <span class="date">CURRICULUM 10</span>
-                        <h2><a href="potter.html">세라믹페인팅반</a></h2>
+
+                        <span class="date">
+                            CURRICULUM 10
+                        </span>
+
+                        <h2>
+                            <a href="potter.html">
+                                세라믹페인팅반
+                            </a>
+                        </h2>
+
                     </header>
+
+
                     <a href="potter.html" class="image fit">
-                        <img src="images/pic77.jpg" alt="세라믹페인팅 수업" />
+
+                        <img
+                            src="images/pic77.jpg"
+                            alt="세라믹페인팅 수업"
+                        />
+
                     </a>
+
+
                     <p>
                         도자기 표면에 색과 무늬를 표현해 자신만의 작품을 완성하는 수업입니다.
                         색채 감각과 섬세한 표현력을 기르며 일상에서 예술을 경험하는
                         창작의 즐거움을 배웁니다.
                     </p>
+
+
                     <ul class="actions special">
-                        <li><a href="potter.html" class="button">자세히 보기</a></li>
+
+                        <li>
+                            <a href="potter.html" class="button">
+                                자세히 보기
+                            </a>
+                        </li>
+
                     </ul>
+
                 </article>
 
+
             </section>
+
         </div>
 
+
+
         <!-- Footer -->
+
         <footer id="footer">
 
+
+            <!-- Academy information -->
+
             <section>
-                <h2>예종미술학원</h2>
+
+                <h2>
+                    예종미술학원
+                </h2>
+
                 <p>
                     예종미술학원은 회화를 중심으로 한 맞춤형 미술교육을 통해
                     아이들의 창의성과 표현력을 키우고, 장기적인 성장과 진학을 위한
                     실질적인 교육을 제공합니다.
                 </p>
-                <p>교육과정 및 상담은 각 캠퍼스로 문의해 주세요.</p>
+
+                <p>
+                    교육과정 및 상담은 각 캠퍼스로 문의해 주세요.
+                </p>
+
             </section>
+
+
+
+            <!-- Contact -->
 
             <section class="split contact">
 
+
                 <section>
-                    <h3>문래 캠퍼스</h3>
+
+                    <h3>
+                        문래 캠퍼스
+                    </h3>
+
                     <p>
                         서울 영등포구 선유로 58 (문래동3가), 2층<br />
-                        <a href="https://naver.me/xGF2BzoG" target="_blank" rel="noopener">지도 보기</a>
+                        <a
+                            href="https://naver.me/xGF2BzoG"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            지도 보기
+                        </a>
                     </p>
+
                 </section>
 
-                <section>
-                    <h3>전화</h3>
-                    <p><a href="tel:0260122600">02-6012-2600</a></p>
-                </section>
+
 
                 <section>
-                    <h3>영등포 캠퍼스</h3>
+
+                    <h3>
+                        영등포 캠퍼스
+                    </h3>
+
                     <p>
                         서울 영등포구 도영로 66, 2층<br />
-                        <a href="https://naver.me/5k7b8kQR" target="_blank" rel="noopener">지도 보기</a>
+                        <a
+                            href="https://naver.me/5k7b8kQR"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            지도 보기
+                        </a>
                     </p>
+
                 </section>
 
-                <section>
-                    <h3>전화</h3>
-                    <p><a href="tel:028321471">02-832-1471</a></p>
-                </section>
+
 
                 <section>
-                    <h3>이메일</h3>
-                    <p><a href="mailto:yejongart@gmail.com">yejongart@gmail.com</a></p>
+
+                    <h3>
+                        전화
+                    </h3>
+
+                    <p>
+                        <a href="tel:0260122600">
+                            02-6012-2600
+                        </a>
+                    </p>
+
                 </section>
+
+
+
+                <section>
+
+                    <h3>
+                        전화
+                    </h3>
+
+                    <p>
+                        <a href="tel:028321471">
+                            02-832-1471
+                        </a>
+                    </p>
+
+                </section>
+
+
+
+                <section>
+
+                    <h3>
+                        이메일
+                    </h3>
+
+                    <p>
+                        <a href="mailto:yejongart@gmail.com">
+                            yejongart@gmail.com
+                        </a>
+                    </p>
+
+                </section>
+
 
             </section>
+
         </footer>
 
+
+
         <!-- Copyright -->
+
         <div id="copyright">
+
             <ul>
-                <li>&copy; 예종미술학원</li>
-                <li>YEJONG ART ACADEMY</li>
+
+                <li>
+                    &copy; 예종미술학원
+                </li>
+
+                <li>
+                    YEJONG ART ACADEMY
+                </li>
+
             </ul>
+
         </div>
+
 
     </div>
 
+
+
     <!-- Scripts -->
+
     <script src="assets/js/massively-jquery.min.js"></script>
     <script src="assets/js/massively-jquery.scrollex.min.js"></script>
     <script src="assets/js/massively-jquery.scrolly.min.js"></script>
