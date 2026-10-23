@@ -18,10 +18,7 @@
     </noscript>
 
     <style>
-        /* ========================================
-           기본 설정
-        ======================================== */
-
+        /* 기본 설정 */
         html {
             scroll-behavior: smooth;
         }
@@ -32,16 +29,11 @@
             background: #ffffff;
         }
 
-        /* 기존 검은색 인트로 영역 숨김 */
         #intro {
             display: none !important;
         }
 
-
-        /* ========================================
-           상단 로고 영역
-        ======================================== */
-
+        /* 상단 로고 */
         #header {
             height: auto !important;
             min-height: 0 !important;
@@ -57,11 +49,7 @@
             color: #333333 !important;
         }
 
-
-        /* ========================================
-           메뉴바
-        ======================================== */
-
+        /* 메뉴바 */
         #nav {
             height: auto !important;
             min-height: 0 !important;
@@ -90,15 +78,7 @@
             color: #222222;
         }
 
-        #nav ul.icons {
-            height: auto !important;
-        }
-
-
-        /* ========================================
-           메뉴와 학원 소개 사이 간격
-        ======================================== */
-
+        /* 메뉴 아래 학원 소개 영역 */
         #main {
             padding-top: 1.5rem !important;
         }
@@ -144,12 +124,7 @@
             margin-bottom: 0;
         }
 
-
-        /* ========================================
-           커리큘럼
-           기존 카드 구성과 이미지 비율 유지
-        ======================================== */
-
+        /* 커리큘럼 - 기존 구성 유지 */
         #curriculum {
             margin-top: 0.5rem;
         }
@@ -188,90 +163,88 @@
             margin-bottom: 0;
         }
 
-
-        /* ========================================
-           풋터 전체
-        ======================================== */
-
+        /* 풋터 전체 */
         #footer {
-            display: block;
-            padding: 2.25rem 3rem !important;
+            display: block !important;
+            padding: 2.5rem 3rem !important;
             background: #f7f7f7 !important;
         }
 
-        #footer h2,
-        #footer h3 {
-            color: #333333;
-        }
-
-        #footer > section:first-child {
+        #footer .footer-intro {
+            display: block;
             width: 100%;
-            padding: 0 0 1.4rem !important;
-            margin: 0 0 1.5rem !important;
+            padding: 0 0 1.5rem !important;
+            margin: 0 0 1.75rem !important;
             border-bottom: 1px solid #dddddd;
         }
 
-        #footer > section:first-child h2 {
-            margin-bottom: 0.65rem;
+        #footer .footer-intro h2 {
+            margin-bottom: 0.75rem;
+            color: #333333;
         }
 
-        #footer > section:first-child p {
+        #footer .footer-intro p {
             max-width: 760px;
             margin-bottom: 0.5rem;
             line-height: 1.8;
         }
 
-
-        /* ========================================
-           풋터 캠퍼스 및 연락처
-           데스크톱에서는 5개 항목을 균형 있게 배치
-        ======================================== */
-
-        #footer .split.contact {
+        /* 캠퍼스 카드 2개를 동일한 구조로 배치 */
+        #footer .campus-list {
             display: grid !important;
-            grid-template-columns: minmax(0, 1.5fr)
-                                   minmax(0, 0.8fr)
-                                   minmax(0, 1.5fr)
-                                   minmax(0, 0.8fr)
-                                   minmax(0, 1.2fr);
-            gap: 1.25rem;
-            align-items: start;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
             width: 100%;
             padding: 0 !important;
             margin: 0 !important;
         }
 
-        #footer .split.contact > section {
+        #footer .campus-card {
+            display: block !important;
             min-width: 0;
-            width: auto !important;
-            padding: 0 !important;
+            padding: 1.5rem !important;
             margin: 0 !important;
-            border: 0 !important;
+            background: #ffffff;
+            border: 1px solid #e6e6e6 !important;
+            border-radius: 4px;
         }
 
-        #footer .split.contact h3 {
-            margin: 0 0 0.45rem;
-            font-size: 0.78rem;
+        #footer .campus-card h3 {
+            margin: 0 0 1rem;
+            color: #333333;
+            font-size: 1rem;
             line-height: 1.5;
+        }
+
+        #footer .campus-card dl {
+            margin: 0;
+        }
+
+        #footer .campus-card dt {
+            margin: 0.85rem 0 0.25rem;
+            color: #666666;
+            font-size: 0.72rem;
+            font-weight: 700;
             letter-spacing: 0.06em;
         }
 
-        #footer .split.contact p {
+        #footer .campus-card dt:first-child {
+            margin-top: 0;
+        }
+
+        #footer .campus-card dd {
             margin: 0;
             font-size: 0.85rem;
-            line-height: 1.7;
+            line-height: 1.75;
+            overflow-wrap: anywhere;
+            word-break: normal;
+        }
+
+        #footer .campus-card a {
             overflow-wrap: anywhere;
         }
 
-        #footer .split.contact a {
-            overflow-wrap: anywhere;
-        }
-
-
-        /* ========================================
-           저작권 영역
-        ======================================== */
-
+        /* 저작권 영역 */
         #copyright {
             padding: 1.1rem 1rem !important;
             background: #ffffff;
@@ -281,31 +254,7 @@
             margin-bottom: 0;
         }
 
-
-        /* ========================================
-           태블릿
-        ======================================== */
-
-        @media screen and (max-width: 1100px) {
-            #footer {
-                padding: 2rem !important;
-            }
-
-            #footer .split.contact {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 1.5rem 1.25rem;
-            }
-
-            #footer .split.contact > section:nth-child(5) {
-                grid-column: auto;
-            }
-        }
-
-
-        /* ========================================
-           태블릿 및 작은 화면
-        ======================================== */
-
+        /* 태블릿 */
         @media screen and (max-width: 980px) {
             #header {
                 padding: 1.15rem 1rem !important;
@@ -320,17 +269,20 @@
                 padding-top: 1.25rem !important;
             }
 
-            #footer .split.contact {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 1.4rem 1.5rem;
+            #footer {
+                padding: 2rem !important;
+            }
+
+            #footer .campus-list {
+                gap: 1rem;
+            }
+
+            #footer .campus-card {
+                padding: 1.25rem !important;
             }
         }
 
-
-        /* ========================================
-           모바일
-        ======================================== */
-
+        /* 모바일 */
         @media screen and (max-width: 736px) {
             #header {
                 padding: 0.9rem 0.75rem !important;
@@ -376,40 +328,26 @@
                 padding: 1.75rem 1.25rem !important;
             }
 
-            #footer > section:first-child {
+            #footer .footer-intro {
                 padding-bottom: 1.15rem !important;
                 margin-bottom: 1.25rem !important;
             }
 
-            #footer .split.contact {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 1.25rem 1rem;
+            #footer .campus-list {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
 
-            #footer .split.contact h3 {
-                font-size: 0.74rem;
-            }
-
-            #footer .split.contact p {
-                font-size: 0.8rem;
-                line-height: 1.65;
+            #footer .campus-card {
+                padding: 1.25rem !important;
             }
         }
 
-
-        /* ========================================
-           좁은 모바일
-        ======================================== */
-
+        /* 좁은 모바일 */
         @media screen and (max-width: 420px) {
             #nav ul.links li a {
                 padding: 0.6rem 0.35rem !important;
                 font-size: 0.68rem;
-            }
-
-            #footer .split.contact {
-                grid-template-columns: 1fr;
-                gap: 1.1rem;
             }
         }
     </style>
@@ -682,7 +620,8 @@
         <!-- Footer -->
         <footer id="footer">
 
-            <section>
+            <!-- 학원 소개 -->
+            <section class="footer-intro">
                 <h2>예종미술학원</h2>
                 <p>
                     예종미술학원은 회화를 중심으로 한 맞춤형 미술교육을 통해
@@ -692,40 +631,54 @@
                 <p>교육과정 및 상담은 각 캠퍼스로 문의해 주세요.</p>
             </section>
 
-            <section class="split contact">
+            <!-- 캠퍼스 정보: 영등포 → 문래 순서 -->
+            <div class="campus-list">
 
-                <section>
-                    <h3>문래 캠퍼스</h3>
-                    <p>
-                        서울 영등포구 선유로 58 (문래동3가), 2층<br />
-                        <a href="https://naver.me/xGF2BzoG" target="_blank" rel="noopener">지도 보기</a>
-                    </p>
-                </section>
-
-                <section>
-                    <h3>전화</h3>
-                    <p><a href="tel:0260122600">02-6012-2600</a></p>
-                </section>
-
-                <section>
+                <!-- 영등포 캠퍼스 -->
+                <section class="campus-card">
                     <h3>영등포 캠퍼스</h3>
-                    <p>
-                        서울 영등포구 도영로 66, 2층<br />
-                        <a href="https://naver.me/5k7b8kQR" target="_blank" rel="noopener">지도 보기</a>
-                    </p>
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>
+                            서울 영등포구 도영로 66, 2층<br />
+                            <a href="https://naver.me/5k7b8kQR" target="_blank" rel="noopener">지도 보기</a>
+                        </dd>
+
+                        <dt>전화</dt>
+                        <dd>
+                            <a href="tel:028321471">02-832-1471</a>
+                        </dd>
+
+                        <dt>이메일</dt>
+                        <dd>
+                            <a href="mailto:yejongart@gmail.com">yejongart@gmail.com</a>
+                        </dd>
+                    </dl>
                 </section>
 
-                <section>
-                    <h3>전화</h3>
-                    <p><a href="tel:028321471">02-832-1471</a></p>
+                <!-- 문래 캠퍼스 -->
+                <section class="campus-card">
+                    <h3>문래 캠퍼스</h3>
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>
+                            서울 영등포구 선유로 58 (문래동3가), 2층<br />
+                            <a href="https://naver.me/xGF2BzoG" target="_blank" rel="noopener">지도 보기</a>
+                        </dd>
+
+                        <dt>전화</dt>
+                        <dd>
+                            <a href="tel:0260122600">02-6012-2600</a>
+                        </dd>
+
+                        <dt>이메일</dt>
+                        <dd>
+                            <a href="mailto:yejongart@gmail.com">yejongart@gmail.com</a>
+                        </dd>
+                    </dl>
                 </section>
 
-                <section>
-                    <h3>이메일</h3>
-                    <p><a href="mailto:yejongart@gmail.com">yejongart@gmail.com</a></p>
-                </section>
-
-            </section>
+            </div>
         </footer>
 
         <!-- Copyright -->
