@@ -99,8 +99,39 @@
             margin-bottom: 0.5rem;
         }
 
-        #main > .post.featured .major h2 {
+        /* 메인 제목 공통 */
+        #main > .post.featured .major h2.academy-title {
             margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        #main > .post.featured .major h2.academy-title a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        /* 첫 번째 줄 */
+        #main > .post.featured .major h2.academy-title .title-sub {
+            display: block;
+            font-size: 0.72em;
+            font-weight: 500;
+            line-height: 1.5;
+            white-space: nowrap;
+            letter-spacing: -0.035em;
+        }
+
+        /* 두 번째 줄 - 학원명 */
+        #main > .post.featured .major h2.academy-title .title-main {
+            display: block;
+            font-size: 1em;
+            font-weight: 700;
+            line-height: 1.4;
+            white-space: nowrap;
+            letter-spacing: -0.045em;
         }
 
         #main > .post.featured .major p {
@@ -310,9 +341,18 @@
                 padding-bottom: 0.85rem !important;
             }
 
-            #main > .post.featured .major h2 {
+            /* 모바일 메인 제목 */
+            #main > .post.featured .major h2.academy-title {
                 font-size: 1.55rem;
                 line-height: 1.4;
+            }
+
+            #main > .post.featured .major h2.academy-title .title-sub {
+                font-size: 0.78em;
+            }
+
+            #main > .post.featured .major h2.academy-title .title-main {
+                font-size: 1.15em;
             }
 
             #main > .post.featured .major p {
@@ -348,6 +388,10 @@
             #nav ul.links li a {
                 padding: 0.6rem 0.35rem !important;
                 font-size: 0.68rem;
+            }
+
+            #main > .post.featured .major h2.academy-title {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -396,12 +440,15 @@
             <article class="post featured">
                 <header class="major">
                     <span class="date">YEJONG ART ACADEMY</span>
-                    <h2>
+
+                    <!-- 메인 제목 -->
+                    <h2 class="academy-title">
                         <a href="Introduction.html">
-                            실력과 사랑으로<br />
-                            지도하는 예종미술학원
+                            <span class="title-sub">실력과 사랑으로 지도하는</span>
+                            <span class="title-main">예종미술학원</span>
                         </a>
                     </h2>
+
                     <p>
                         <strong>예종미술학원</strong>은 유치부부터 입시부까지 발달 단계에 맞춘
                         체계적인 <strong>회화 중심 미술교육</strong>을 제공하는 전문 교육기관입니다.
@@ -662,7 +709,7 @@
                         <dt>주소</dt>
                         <dd>
                             서울 영등포구 선유로 58 (문래동3가), 2층<br />
-                           <a href="https://naver.me/GP2JOOXJ" target="_blank" rel="noopener">지도 보기</a>
+                            <a href="https://naver.me/GP2JOOXJ" target="_blank" rel="noopener">지도 보기</a>
                         </dd>
 
                         <dt>전화</dt>
